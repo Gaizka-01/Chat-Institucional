@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ProyectoFinal/1.0.0": {
+        "dependencies": {
+          "Guna.UI2.WinForms": "2.0.1.8",
+          "VisualBasic.PowerPacks.Vs": "1.0.0"
+        },
+        "runtime": {
+          "ProyectoFinal.dll": {}
+        }
+      },
+      "Guna.UI2.WinForms/2.0.1.8": {
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.1.8",
+            "fileVersion": "2.0.1.8"
+          }
+        }
+      },
+      "VisualBasic.PowerPacks.Vs/1.0.0": {
+        "runtime": {
+          "lib/Microsoft.VisualBasic.PowerPacks.Vs.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.40219.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProyectoFinal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Guna.UI2.WinForms/2.0.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PSOBqJrb+r0phh+3jbRlsVg9CeSl6yxELL7O11D/bftSSQykTTWt8pa5sKlA5ljBzijBV3mpYMGEjyGZbkxujw==",
+      "path": "guna.ui2.winforms/2.0.1.8",
+      "hashPath": "guna.ui2.winforms.2.0.1.8.nupkg.sha512"
+    },
+    "VisualBasic.PowerPacks.Vs/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IiQWQjCWfPmwR8Q1P1V/z1Et7Mr3QG4RUw+mgXuUgNvseNm06VDEZu8DwlZx9UXw+Uf6E7E/d5wXpGEYJOuG7g==",
+      "path": "visualbasic.powerpacks.vs/1.0.0",
+      "hashPath": "visualbasic.powerpacks.vs.1.0.0.nupkg.sha512"
+    }
+  }
+}
