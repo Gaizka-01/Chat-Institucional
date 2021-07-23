@@ -1,0 +1,9 @@
+E:\VamoLoco\Ventanas\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.deps.json
+E:\VamoLoco\Ventanas\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.dll
+E:\VamoLoco\Ventanas\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.pdb
+E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.AssemblyReference.cache
+E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.AssemblyInfoInputs.cache
+E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.AssemblyInfo.cs
+E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.CoreCompileInputs.cache
+E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
+E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
