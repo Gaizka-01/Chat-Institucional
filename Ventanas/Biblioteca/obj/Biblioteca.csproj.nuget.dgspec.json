@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\VamoLoco\\Ventanas\\Biblioteca\\Biblioteca.csproj": {}
+    "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\Biblioteca.csproj": {}
   },
   "projects": {
-    "E:\\VamoLoco\\Ventanas\\Biblioteca\\Biblioteca.csproj": {
+    "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\Biblioteca.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\VamoLoco\\Ventanas\\Biblioteca\\Biblioteca.csproj",
+        "projectUniqueName": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\Biblioteca.csproj",
         "projectName": "Biblioteca",
-        "projectPath": "E:\\VamoLoco\\Ventanas\\Biblioteca\\Biblioteca.csproj",
+        "projectPath": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\Biblioteca.csproj",
         "packagesPath": "C:\\Users\\Paul\\.nuget\\packages\\",
-        "outputPath": "E:\\VamoLoco\\Ventanas\\Biblioteca\\obj\\",
+        "outputPath": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

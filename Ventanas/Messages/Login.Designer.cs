@@ -29,6 +29,7 @@ namespace Messages
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,7 +93,7 @@ namespace Messages
             this.btnCerrar.Location = new System.Drawing.Point(732, 13);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(23, 24);
-            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -104,9 +105,9 @@ namespace Messages
             this.lblTipo.ForeColor = System.Drawing.Color.DimGray;
             this.lblTipo.Location = new System.Drawing.Point(340, 9);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(127, 24);
+            this.lblTipo.Size = new System.Drawing.Size(119, 24);
             this.lblTipo.TabIndex = 3;
-            this.lblTipo.Text = "| Alummos";
+            this.lblTipo.Text = "| Alumnos";
             // 
             // tbUsuario
             // 
@@ -114,10 +115,10 @@ namespace Messages
             this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.tbUsuario.Location = new System.Drawing.Point(273, 214);
+            this.tbUsuario.Location = new System.Drawing.Point(304, 229);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(420, 20);
-            this.tbUsuario.TabIndex = 4;
+            this.tbUsuario.TabIndex = 2;
             this.tbUsuario.Text = "Usuario";
             this.tbUsuario.Enter += new System.EventHandler(this.tbUsuario_Enter);
             this.tbUsuario.Leave += new System.EventHandler(this.tbUsuario_Leave);
@@ -133,7 +134,7 @@ namespace Messages
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(273, 240);
+            this.panel2.Location = new System.Drawing.Point(304, 255);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(420, 1);
             this.panel2.TabIndex = 41;
@@ -144,18 +145,18 @@ namespace Messages
             this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.tbContraseña.Location = new System.Drawing.Point(273, 261);
+            this.tbContraseña.Location = new System.Drawing.Point(304, 276);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.Size = new System.Drawing.Size(420, 20);
-            this.tbContraseña.TabIndex = 42;
-            this.tbContraseña.Text = "Contraseña";
+            this.tbContraseña.TabIndex = 3;
+            this.tbContraseña.Text = resources.GetString("tbContraseña.Text");
             this.tbContraseña.Enter += new System.EventHandler(this.tbContraseña_Enter);
             this.tbContraseña.Leave += new System.EventHandler(this.tbContraseña_Leave);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
-            this.panel3.Location = new System.Drawing.Point(273, 287);
+            this.panel3.Location = new System.Drawing.Point(304, 302);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 1);
             this.panel3.TabIndex = 43;
@@ -163,7 +164,7 @@ namespace Messages
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Ventanas1.Properties.Resources.Profesor1;
-            this.pictureBox2.Location = new System.Drawing.Point(273, 96);
+            this.pictureBox2.Location = new System.Drawing.Point(304, 111);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(95, 69);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,7 +175,7 @@ namespace Messages
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Ventanas1.Properties.Resources.Alumno;
-            this.pictureBox3.Location = new System.Drawing.Point(431, 96);
+            this.pictureBox3.Location = new System.Drawing.Point(462, 111);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 69);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +186,7 @@ namespace Messages
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Ventanas1.Properties.Resources.Administrador;
-            this.pictureBox4.Location = new System.Drawing.Point(593, 96);
+            this.pictureBox4.Location = new System.Drawing.Point(624, 111);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(100, 73);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,10 +199,10 @@ namespace Messages
             this.btnAcceder.BackColor = System.Drawing.Color.DimGray;
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAcceder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAcceder.Location = new System.Drawing.Point(273, 305);
+            this.btnAcceder.Location = new System.Drawing.Point(304, 320);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(420, 33);
-            this.btnAcceder.TabIndex = 47;
+            this.btnAcceder.TabIndex = 4;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
@@ -210,6 +211,7 @@ namespace Messages
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.ForeColor = System.Drawing.Color.DimGray;
             this.btnRegistrar.Location = new System.Drawing.Point(256, 415);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 35);
@@ -222,7 +224,8 @@ namespace Messages
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(569, 415);
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(593, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 35);
             this.button1.TabIndex = 49;

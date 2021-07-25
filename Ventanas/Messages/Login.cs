@@ -15,20 +15,9 @@ namespace Messages
 {
     public partial class Login : Form
     {
-        //Bordes Redondeados
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-        int nLeftRect, // x-coordinate of upper-left corner
-        int nTopRect, // y-coordinate of upper-left corner
-        int nRightRect, // x-coordinate of lower-right corner
-        int nBottomRect, // y-coordinate of lower-right corner
-        int nWidthEllipse, // height of ellipse
-        int nHeightEllipse // width of ellipse
-        );
+        
         public Login()
         {
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             InitializeComponent();
 
         }
@@ -97,21 +86,70 @@ namespace Messages
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Registro.abrir();
+            Registro nueva = new Registro();
+            nueva.Visible = true;
+            Visible = false;
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            try
+            string tipo;
+            tipo = lblTipo.Text;
+            if (tbUsuario.Text == "Usuario" || tbContraseña.Text == "Contraseña" ) 
             {
-                Alumnos.LoginAlumno(tbUsuario.Text,tbContraseña.Text);
-                intAlumno nueva = new intAlumno();
-                nueva.Show();
-                Registro.cerrar();
+                MessageBox.Show("Por favor completa todos los campos");
+                
             }
-            catch
+            else
             {
-                MessageBox.Show("No se encontro un usuario con ese nombre y contraseña");
+                switch (tipo)
+                {
+                    case "| Alumnos":
+                        try
+                        {
+                            Alumnos.LoginAlumno(tbUsuario.Text, tbContraseña.Text);
+                            Alumnos nuevo = new Alumnos();
+                            nuevo = Alumnos.getAlumnmo(tbUsuario.Text, tbContraseña.Text);
+                            intAlumno nueva = new intAlumno(Alumnos.Nombre(nuevo), Alumnos.Apelido(nuevo), Alumnos.Grupo(nuevo));
+                            nueva.Visible = true;
+                            Visible = false;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No se encontro un alumno con ese usuario y contraseña");
+                        }
+                        break;
+                    case "| Profesores":
+                        try
+                        {
+                            Profesores.LoginProfesor(tbUsuario.Text, tbContraseña.Text);
+                            Profesores nuevo = new Profesores();
+                            nuevo = Profesores.getProfesor(tbUsuario.Text, tbContraseña.Text);
+                            intProfesor nueva = new intProfesor();
+                            nueva.Visible = true;
+                            Visible = false;
+
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No se encontro un profesor con ese usuario y contraseña");
+                        }
+
+                        break;
+                    case "| Administradores":
+                        try
+                        {
+                            Administradores.LoginAdministrador(tbUsuario.Text, tbContraseña.Text);
+                            intAdmin nueva = new intAdmin();
+                            nueva.Visible = true;
+                            Visible = false;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("No se encontro un administrador con es usuario y contraseña");
+                        }
+                        break;
+                }
             }
         }
     }

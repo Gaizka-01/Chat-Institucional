@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VamoLoco\\Ventanas\\Messages\\Ventanas1.csproj",
+      "projectUniqueName": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Messages\\Ventanas1.csproj",
       "projectName": "Ventanas1",
-      "projectPath": "E:\\VamoLoco\\Ventanas\\Messages\\Ventanas1.csproj",
+      "projectPath": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Messages\\Ventanas1.csproj",
       "packagesPath": "C:\\Users\\Paul\\.nuget\\packages\\",
-      "outputPath": "E:\\VamoLoco\\Ventanas\\Messages\\obj\\",
+      "outputPath": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Messages\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,8 +58,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\VamoLoco\\Ventanas\\Biblioteca\\Biblioteca.csproj": {
-              "projectPath": "E:\\VamoLoco\\Ventanas\\Biblioteca\\Biblioteca.csproj"
+            "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\Biblioteca.csproj": {
+              "projectPath": "E:\\messagesrepositorio\\Chat-Institucional\\Ventanas\\Biblioteca\\Biblioteca.csproj"
             }
           }
         }

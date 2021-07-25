@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Biblioteca;
+using Messages;
 
 namespace Ventanas1
 {
@@ -17,15 +18,7 @@ namespace Ventanas1
             tbMateria.Visible = false;
             pMateria.Visible = false;
         }
-        public static void abrir()
-        {
-            Registro ventana = new Registro();
-            ventana.Show();
-        }
-        public static void cerrar()
-        {
-            Application.Exit();
-        }
+        
         //botones cerrar y minimizar
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -186,24 +179,25 @@ namespace Ventanas1
                 e.Handled = true;
             }
         }
-
-        private void cbAlumno_CheckedChanged(object sender, EventArgs e)
+        private void rbAlumno_CheckedChanged(object sender, EventArgs e)
         {
-            cbProfesor.Checked = false;
+            rbProfesor.Checked = false;
             tbMateria.Visible = false;
             pMateria.Visible = false;
         }
 
-        private void cbProfesor_CheckedChanged(object sender, EventArgs e)
+        private void rbProfesor_CheckedChanged(object sender, EventArgs e)
         {
-            cbAlumno.Checked = false;
+            rbAlumno.Checked = false;
             tbMateria.Visible = true;
             pMateria.Visible = true;
         }
 
+
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            bool tipo = cbAlumno.Checked;
+            bool tipo = rbAlumno.Checked;
             switch (tipo)
             {
                 case true:
@@ -223,6 +217,10 @@ namespace Ventanas1
                         {
                             Alumnos.CrearAlummo(tbNombre.Text, tbApellido.Text, Convert.ToInt32(tbCedula.Text), tbContraseña.Text, tbGrupo.Text);
                             MessageBox.Show("Usuario Creado Correctamente");
+                            Visible = false;
+                            Login nueva = new Login();
+                            nueva.Show();
+                            
                         }
                         catch
                         {
@@ -259,5 +257,7 @@ namespace Ventanas1
 
             
         }
+
+        
     }
 }

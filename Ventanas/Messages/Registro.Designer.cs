@@ -39,8 +39,6 @@ namespace Ventanas1
             this.tbApellido = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbNombre = new System.Windows.Forms.TextBox();
-            this.cbAlumno = new System.Windows.Forms.CheckBox();
-            this.cbProfesor = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tbContraseña = new System.Windows.Forms.TextBox();
@@ -54,6 +52,8 @@ namespace Ventanas1
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tbCedula = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.rbAlumno = new System.Windows.Forms.RadioButton();
+            this.rbProfesor = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +126,7 @@ namespace Ventanas1
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
-            this.panel3.Location = new System.Drawing.Point(277, 187);
+            this.panel3.Location = new System.Drawing.Point(310, 190);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 1);
             this.panel3.TabIndex = 59;
@@ -137,10 +137,10 @@ namespace Ventanas1
             this.tbApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.tbApellido.Location = new System.Drawing.Point(277, 161);
+            this.tbApellido.Location = new System.Drawing.Point(310, 164);
             this.tbApellido.Name = "tbApellido";
             this.tbApellido.Size = new System.Drawing.Size(420, 20);
-            this.tbApellido.TabIndex = 58;
+            this.tbApellido.TabIndex = 2;
             this.tbApellido.Text = "Apellido";
             this.tbApellido.Enter += new System.EventHandler(this.tbApellido_Enter);
             this.tbApellido.Leave += new System.EventHandler(this.tbApellido_Leave);
@@ -148,7 +148,7 @@ namespace Ventanas1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(277, 154);
+            this.panel2.Location = new System.Drawing.Point(310, 157);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(420, 1);
             this.panel2.TabIndex = 57;
@@ -159,48 +159,20 @@ namespace Ventanas1
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.tbNombre.Location = new System.Drawing.Point(277, 128);
+            this.tbNombre.Location = new System.Drawing.Point(310, 131);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(420, 20);
-            this.tbNombre.TabIndex = 56;
+            this.tbNombre.TabIndex = 1;
             this.tbNombre.Text = "Nombre";
             this.tbNombre.Enter += new System.EventHandler(this.tbNombre_Enter);
             this.tbNombre.Leave += new System.EventHandler(this.tbNombre_Leave);
-            // 
-            // cbAlumno
-            // 
-            this.cbAlumno.AutoSize = true;
-            this.cbAlumno.Checked = true;
-            this.cbAlumno.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbAlumno.ForeColor = System.Drawing.Color.DimGray;
-            this.cbAlumno.Location = new System.Drawing.Point(277, 90);
-            this.cbAlumno.Name = "cbAlumno";
-            this.cbAlumno.Size = new System.Drawing.Size(90, 25);
-            this.cbAlumno.TabIndex = 60;
-            this.cbAlumno.Text = "Alumno";
-            this.cbAlumno.UseVisualStyleBackColor = true;
-            this.cbAlumno.CheckedChanged += new System.EventHandler(this.cbAlumno_CheckedChanged);
-            // 
-            // cbProfesor
-            // 
-            this.cbProfesor.AutoSize = true;
-            this.cbProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbProfesor.ForeColor = System.Drawing.Color.DimGray;
-            this.cbProfesor.Location = new System.Drawing.Point(402, 90);
-            this.cbProfesor.Name = "cbProfesor";
-            this.cbProfesor.Size = new System.Drawing.Size(89, 25);
-            this.cbProfesor.TabIndex = 61;
-            this.cbProfesor.Text = "Profesor";
-            this.cbProfesor.UseVisualStyleBackColor = true;
-            this.cbProfesor.CheckedChanged += new System.EventHandler(this.cbProfesor_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(277, 61);
+            this.label2.Location = new System.Drawing.Point(310, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 17);
             this.label2.TabIndex = 62;
@@ -209,7 +181,7 @@ namespace Ventanas1
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DimGray;
-            this.panel5.Location = new System.Drawing.Point(277, 121);
+            this.panel5.Location = new System.Drawing.Point(310, 124);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(420, 1);
             this.panel5.TabIndex = 63;
@@ -220,10 +192,10 @@ namespace Ventanas1
             this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.tbContraseña.Location = new System.Drawing.Point(277, 227);
+            this.tbContraseña.Location = new System.Drawing.Point(310, 230);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.Size = new System.Drawing.Size(420, 20);
-            this.tbContraseña.TabIndex = 64;
+            this.tbContraseña.TabIndex = 4;
             this.tbContraseña.Text = "Contraseña";
             this.tbContraseña.Enter += new System.EventHandler(this.tbContraseña_Enter);
             this.tbContraseña.Leave += new System.EventHandler(this.tbContraseña_Leave);
@@ -231,7 +203,7 @@ namespace Ventanas1
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Location = new System.Drawing.Point(277, 253);
+            this.panel6.Location = new System.Drawing.Point(310, 256);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(420, 1);
             this.panel6.TabIndex = 65;
@@ -242,10 +214,10 @@ namespace Ventanas1
             this.tbContraseña2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContraseña2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbContraseña2.ForeColor = System.Drawing.Color.DimGray;
-            this.tbContraseña2.Location = new System.Drawing.Point(277, 260);
+            this.tbContraseña2.Location = new System.Drawing.Point(310, 263);
             this.tbContraseña2.Name = "tbContraseña2";
             this.tbContraseña2.Size = new System.Drawing.Size(420, 20);
-            this.tbContraseña2.TabIndex = 66;
+            this.tbContraseña2.TabIndex = 5;
             this.tbContraseña2.Text = "Repetir Contraseña";
             this.tbContraseña2.Enter += new System.EventHandler(this.tbContraseña2_Enter);
             this.tbContraseña2.Leave += new System.EventHandler(this.tbContraseña2_Leave);
@@ -253,7 +225,7 @@ namespace Ventanas1
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DimGray;
-            this.panel7.Location = new System.Drawing.Point(277, 286);
+            this.panel7.Location = new System.Drawing.Point(310, 289);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(420, 1);
             this.panel7.TabIndex = 67;
@@ -264,10 +236,10 @@ namespace Ventanas1
             this.tbGrupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbGrupo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbGrupo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbGrupo.Location = new System.Drawing.Point(277, 293);
+            this.tbGrupo.Location = new System.Drawing.Point(310, 296);
             this.tbGrupo.Name = "tbGrupo";
             this.tbGrupo.Size = new System.Drawing.Size(420, 20);
-            this.tbGrupo.TabIndex = 68;
+            this.tbGrupo.TabIndex = 6;
             this.tbGrupo.Text = "Grupo";
             this.tbGrupo.Enter += new System.EventHandler(this.tbGrupo_Enter);
             this.tbGrupo.Leave += new System.EventHandler(this.tbGrupo_Leave);
@@ -275,7 +247,7 @@ namespace Ventanas1
             // pMateria
             // 
             this.pMateria.BackColor = System.Drawing.Color.DimGray;
-            this.pMateria.Location = new System.Drawing.Point(277, 352);
+            this.pMateria.Location = new System.Drawing.Point(310, 355);
             this.pMateria.Name = "pMateria";
             this.pMateria.Size = new System.Drawing.Size(420, 1);
             this.pMateria.TabIndex = 69;
@@ -283,7 +255,7 @@ namespace Ventanas1
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.DimGray;
-            this.panel9.Location = new System.Drawing.Point(277, 319);
+            this.panel9.Location = new System.Drawing.Point(310, 322);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(420, 1);
             this.panel9.TabIndex = 70;
@@ -294,10 +266,10 @@ namespace Ventanas1
             this.tbMateria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMateria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbMateria.ForeColor = System.Drawing.Color.DimGray;
-            this.tbMateria.Location = new System.Drawing.Point(277, 326);
+            this.tbMateria.Location = new System.Drawing.Point(310, 329);
             this.tbMateria.Name = "tbMateria";
             this.tbMateria.Size = new System.Drawing.Size(420, 20);
-            this.tbMateria.TabIndex = 71;
+            this.tbMateria.TabIndex = 7;
             this.tbMateria.Text = "Materia";
             this.tbMateria.Enter += new System.EventHandler(this.tbMateria_Enter);
             this.tbMateria.Leave += new System.EventHandler(this.tbMateria_Leave);
@@ -310,7 +282,7 @@ namespace Ventanas1
             this.btnRegistrar.Location = new System.Drawing.Point(277, 371);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(482, 33);
-            this.btnRegistrar.TabIndex = 72;
+            this.btnRegistrar.TabIndex = 8;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -321,10 +293,10 @@ namespace Ventanas1
             this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.tbCedula.Location = new System.Drawing.Point(277, 194);
+            this.tbCedula.Location = new System.Drawing.Point(310, 197);
             this.tbCedula.Name = "tbCedula";
             this.tbCedula.Size = new System.Drawing.Size(420, 20);
-            this.tbCedula.TabIndex = 73;
+            this.tbCedula.TabIndex = 3;
             this.tbCedula.Text = "Cedula";
             this.tbCedula.Enter += new System.EventHandler(this.tbCedula_Enter);
             this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
@@ -333,10 +305,38 @@ namespace Ventanas1
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.DimGray;
-            this.panel10.Location = new System.Drawing.Point(277, 220);
+            this.panel10.Location = new System.Drawing.Point(310, 223);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(420, 1);
             this.panel10.TabIndex = 74;
+            // 
+            // rbAlumno
+            // 
+            this.rbAlumno.AutoSize = true;
+            this.rbAlumno.Checked = true;
+            this.rbAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbAlumno.ForeColor = System.Drawing.Color.DimGray;
+            this.rbAlumno.Location = new System.Drawing.Point(310, 93);
+            this.rbAlumno.Name = "rbAlumno";
+            this.rbAlumno.Size = new System.Drawing.Size(89, 25);
+            this.rbAlumno.TabIndex = 1;
+            this.rbAlumno.TabStop = true;
+            this.rbAlumno.Text = "Alumno";
+            this.rbAlumno.UseVisualStyleBackColor = true;
+            this.rbAlumno.CheckedChanged += new System.EventHandler(this.rbAlumno_CheckedChanged);
+            // 
+            // rbProfesor
+            // 
+            this.rbProfesor.AutoSize = true;
+            this.rbProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbProfesor.ForeColor = System.Drawing.Color.DimGray;
+            this.rbProfesor.Location = new System.Drawing.Point(405, 93);
+            this.rbProfesor.Name = "rbProfesor";
+            this.rbProfesor.Size = new System.Drawing.Size(88, 25);
+            this.rbProfesor.TabIndex = 76;
+            this.rbProfesor.Text = "Profesor";
+            this.rbProfesor.UseVisualStyleBackColor = true;
+            this.rbProfesor.CheckedChanged += new System.EventHandler(this.rbProfesor_CheckedChanged);
             // 
             // Registro
             // 
@@ -344,6 +344,8 @@ namespace Ventanas1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 450);
+            this.Controls.Add(this.rbProfesor);
+            this.Controls.Add(this.rbAlumno);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.tbCedula);
             this.Controls.Add(this.btnRegistrar);
@@ -357,8 +359,6 @@ namespace Ventanas1
             this.Controls.Add(this.tbContraseña);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbProfesor);
-            this.Controls.Add(this.cbAlumno);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tbApellido);
             this.Controls.Add(this.panel2);
@@ -391,8 +391,6 @@ namespace Ventanas1
         private System.Windows.Forms.TextBox tbApellido;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.CheckBox cbAlumno;
-        private System.Windows.Forms.CheckBox cbProfesor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox tbContraseña;
@@ -406,5 +404,7 @@ namespace Ventanas1
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox tbCedula;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.RadioButton rbAlumno;
+        private System.Windows.Forms.RadioButton rbProfesor;
     }
 }

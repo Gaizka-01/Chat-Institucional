@@ -10,9 +10,24 @@ namespace Ventanas1
 {
     public partial class intAlumno : Form
     {
-        public intAlumno()
+        public intAlumno(string nombre, string apellido, string grupo)
         {
+            
+            
             InitializeComponent();
+            lblNombre.Text = nombre + " " + apellido + "| " + grupo;
+
+        }
+
+    
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
