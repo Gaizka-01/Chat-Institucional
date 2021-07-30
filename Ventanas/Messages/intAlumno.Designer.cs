@@ -30,6 +30,7 @@ namespace Ventanas1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -38,20 +39,26 @@ namespace Ventanas1
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.pChats = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pMensajes = new System.Windows.Forms.Panel();
+            this.pNuevoMensaje = new System.Windows.Forms.Panel();
+            this.lbNuevo = new System.Windows.Forms.ListBox();
+            this.btnConsulta = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.lblPanel = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAdjuntar = new System.Windows.Forms.PictureBox();
             this.tbMensaje = new System.Windows.Forms.TextBox();
-            this.btnEnviar = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblMateria = new System.Windows.Forms.Label();
             this.lbldestinatario = new System.Windows.Forms.Label();
@@ -63,6 +70,7 @@ namespace Ventanas1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.pChats.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -70,11 +78,10 @@ namespace Ventanas1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.pMensajes.SuspendLayout();
+            this.pNuevoMensaje.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdjuntar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEnviar)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,6 +90,7 @@ namespace Ventanas1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox6);
@@ -92,6 +100,19 @@ namespace Ventanas1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(55, 750);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.BackgroundImage = global::Ventanas1.Properties.Resources.cerrarSesion;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 702);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(49, 45);
+            this.btnCerrarSesion.TabIndex = 9;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pictureBox8
             // 
@@ -176,19 +197,51 @@ namespace Ventanas1
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Paul Correa  | 3BA";
             // 
+            // pChats
+            // 
+            this.pChats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
+            this.pChats.Controls.Add(this.panel3);
+            this.pChats.Controls.Add(this.panel7);
+            this.pChats.Controls.Add(this.panel6);
+            this.pChats.Controls.Add(this.panel5);
+            this.pChats.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pChats.Location = new System.Drawing.Point(55, 39);
+            this.pChats.Name = "pChats";
+            this.pChats.Size = new System.Drawing.Size(236, 711);
+            this.pChats.TabIndex = 2;
+            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(55, 39);
+            this.panel3.Controls.Add(this.btnNuevo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 711);
-            this.panel3.TabIndex = 2;
+            this.panel3.Size = new System.Drawing.Size(236, 30);
+            this.panel3.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(10, 4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(176, 23);
+            this.textBox1.TabIndex = 0;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.BackgroundImage = global::Ventanas1.Properties.Resources.mas__1_;
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Location = new System.Drawing.Point(192, 4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(31, 23);
+            this.btnNuevo.TabIndex = 8;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // panel7
             // 
@@ -238,53 +291,108 @@ namespace Ventanas1
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox9
+            // pMensajes
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(210, 6);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(25, 23);
-            this.pictureBox9.TabIndex = 1;
-            this.pictureBox9.TabStop = false;
+            this.pMensajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(47)))));
+            this.pMensajes.Controls.Add(this.pNuevoMensaje);
+            this.pMensajes.Controls.Add(this.panel9);
+            this.pMensajes.Controls.Add(this.panel8);
+            this.pMensajes.Controls.Add(this.pictureBox3);
+            this.pMensajes.Controls.Add(this.pictureBox2);
+            this.pMensajes.Location = new System.Drawing.Point(296, 45);
+            this.pMensajes.Name = "pMensajes";
+            this.pMensajes.Size = new System.Drawing.Size(984, 705);
+            this.pMensajes.TabIndex = 3;
             // 
-            // textBox1
+            // pNuevoMensaje
             // 
-            this.textBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(7, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 23);
-            this.textBox1.TabIndex = 0;
+            this.pNuevoMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(95)))), ((int)(((byte)(138)))));
+            this.pNuevoMensaje.Controls.Add(this.lbNuevo);
+            this.pNuevoMensaje.Controls.Add(this.btnConsulta);
+            this.pNuevoMensaje.Controls.Add(this.panel11);
+            this.pNuevoMensaje.Controls.Add(this.lblPanel);
+            this.pNuevoMensaje.Location = new System.Drawing.Point(133, 82);
+            this.pNuevoMensaje.Name = "pNuevoMensaje";
+            this.pNuevoMensaje.Size = new System.Drawing.Size(758, 623);
+            this.pNuevoMensaje.TabIndex = 7;
             // 
-            // panel4
+            // lbNuevo
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(47)))));
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(296, 45);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(984, 705);
-            this.panel4.TabIndex = 3;
+            this.lbNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(90)))), ((int)(((byte)(130)))));
+            this.lbNuevo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbNuevo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbNuevo.ForeColor = System.Drawing.Color.DimGray;
+            this.lbNuevo.FormattingEnabled = true;
+            this.lbNuevo.ItemHeight = 16;
+            this.lbNuevo.Location = new System.Drawing.Point(14, 71);
+            this.lbNuevo.Name = "lbNuevo";
+            this.lbNuevo.Size = new System.Drawing.Size(731, 176);
+            this.lbNuevo.TabIndex = 78;
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(47)))));
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsulta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsulta.Location = new System.Drawing.Point(14, 551);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(731, 33);
+            this.btnConsulta.TabIndex = 43;
+            this.btnConsulta.Text = "Iniciar Consulta";
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DimGray;
+            this.panel11.Location = new System.Drawing.Point(14, 38);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(420, 1);
+            this.panel11.TabIndex = 41;
+            // 
+            // lblPanel
+            // 
+            this.lblPanel.AutoSize = true;
+            this.lblPanel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPanel.ForeColor = System.Drawing.Color.Gray;
+            this.lblPanel.Location = new System.Drawing.Point(14, 11);
+            this.lblPanel.Name = "lblPanel";
+            this.lblPanel.Size = new System.Drawing.Size(240, 24);
+            this.lblPanel.TabIndex = 0;
+            this.lblPanel.Text = "Crear Nueva Consulta";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
+            this.panel9.Controls.Add(this.button1);
             this.panel9.Controls.Add(this.btnAdjuntar);
             this.panel9.Controls.Add(this.tbMensaje);
-            this.panel9.Controls.Add(this.btnEnviar);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(0, 672);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(984, 33);
             this.panel9.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Ventanas1.Properties.Resources.flecha_hacia_arriba;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(919, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 27);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnAdjuntar
             // 
+            this.btnAdjuntar.Image = global::Ventanas1.Properties.Resources.link;
             this.btnAdjuntar.Location = new System.Drawing.Point(4, 4);
             this.btnAdjuntar.Name = "btnAdjuntar";
             this.btnAdjuntar.Size = new System.Drawing.Size(49, 26);
+            this.btnAdjuntar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAdjuntar.TabIndex = 3;
             this.btnAdjuntar.TabStop = false;
             // 
@@ -300,14 +408,6 @@ namespace Ventanas1
             this.tbMensaje.Size = new System.Drawing.Size(876, 26);
             this.tbMensaje.TabIndex = 1;
             this.tbMensaje.Text = " Mensaje";
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Location = new System.Drawing.Point(938, 4);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(42, 25);
-            this.btnEnviar.TabIndex = 4;
-            this.btnEnviar.TabStop = false;
             // 
             // panel8
             // 
@@ -364,14 +464,15 @@ namespace Ventanas1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1280, 750);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pMensajes);
+            this.Controls.Add(this.pChats);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "intAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "intAlumno";
+            this.Load += new System.EventHandler(this.intAlumno_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -379,6 +480,7 @@ namespace Ventanas1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pChats.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -387,12 +489,12 @@ namespace Ventanas1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.pMensajes.ResumeLayout(false);
+            this.pNuevoMensaje.ResumeLayout(false);
+            this.pNuevoMensaje.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdjuntar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEnviar)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -407,14 +509,13 @@ namespace Ventanas1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pChats;
+        private System.Windows.Forms.Panel pMensajes;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox tbMensaje;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.PictureBox btnEnviar;
         private System.Windows.Forms.PictureBox btnAdjuntar;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -422,7 +523,6 @@ namespace Ventanas1
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lbldestinatario;
@@ -431,5 +531,14 @@ namespace Ventanas1
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel pNuevoMensaje;
+        private System.Windows.Forms.Label lblPanel;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.ListBox lbNuevo;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
     }
 }

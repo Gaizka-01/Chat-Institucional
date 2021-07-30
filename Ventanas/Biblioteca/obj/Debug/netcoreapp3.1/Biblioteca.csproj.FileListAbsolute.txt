@@ -10,9 +10,9 @@ E:\VamoLoco\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.deps.json
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.dll
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\bin\Debug\netcoreapp3.1\Biblioteca.pdb
-E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.AssemblyReference.cache
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.AssemblyInfoInputs.cache
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.AssemblyInfo.cs
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.CoreCompileInputs.cache
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
+E:\messagesrepositorio\Chat-Institucional\Ventanas\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.AssemblyReference.cache

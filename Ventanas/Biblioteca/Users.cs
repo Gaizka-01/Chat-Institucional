@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Windows;
 namespace Biblioteca
 {
     
     public class Alumnos
     {
-        
         private string nombre;
         private string apellido;
         private int cedula;
@@ -13,6 +14,8 @@ namespace Biblioteca
         private string usuario;
         Grupos grupoAlumno = new Grupos();
         static List<Alumnos> listaAlumnos = new List<Alumnos>();
+        static List<Alumnos> listaAlumnosE = new List<Alumnos>();
+        List<Chat> listaChats = new List<Chat>();
         
 
         public Alumnos()
@@ -81,6 +84,7 @@ namespace Biblioteca
             return alu;
             
         }
+        
         public static string Nombre(Alumnos a)
         {
             return a.nombre;
@@ -89,7 +93,7 @@ namespace Biblioteca
         {
             return a.apellido;
         }
-        public static Grupos Grupo(Alumnos a)
+        public static string NombreGrupo(Alumnos a)
         {
             return Grupos.Nombre(a.grupoAlumno);
         }
@@ -97,9 +101,25 @@ namespace Biblioteca
         {
             return a.contraseña;
         }
+        public static Grupos getGrupoObj(Alumnos a)
+        {
+            return a.grupoAlumno;
+        } 
         public static string Usuario(Alumnos a)
         {
             return a.usuario;
+        }
+        public static Alumnos getAlumnoObj(int cedula)
+        {
+            Alumnos retorno = new Alumnos();
+            foreach (Alumnos a in listaAlumnos)
+            {
+                if (a.cedula == cedula)
+                {
+                    retorno = a;
+                }
+            }
+            return retorno;
         }
         public static int Cedula(Alumnos a)
         {
@@ -117,20 +137,21 @@ namespace Biblioteca
         private int cedula;
         private string contraseña;
         private string materia;
-        private string grupo;
+        List<string> mensajes = new List<string>();
+        Grupos grupoProfesor = new Grupos();
         private string usuario;
         static List<Profesores> listaProfesores = new List<Profesores>();
         public Profesores()
         {
 
         }
-        public Profesores(string nombre, string apellido, int cedula, string contraseña, string grupo, string materia, string usuario)
+        public Profesores(string nombre, string apellido, int cedula, string contraseña, Grupos grupo, string materia, string usuario)
         {
             this.nombre = nombre;
             this.apellido = apellido;
             this.cedula = cedula;
             this.contraseña = contraseña;
-            this.grupo = grupo;
+            grupoProfesor = grupo;
             this.materia = materia;
             this.usuario = usuario;
             listaProfesores = Profesores.GetProfesores();
@@ -138,7 +159,7 @@ namespace Biblioteca
         }
         
 
-        public static void CrearProfesor(string nombre, string apellido,int cedula, string contraseña, string grupo, string materia)
+        public static void CrearProfesor(string nombre, string apellido,int cedula, string contraseña, Grupos grupo, string materia)
         {
             string usuario = nombre.Substring(0, 1) + apellido;
             Profesores nuevo = new Profesores(nombre, apellido, cedula, contraseña, grupo, materia, usuario);
@@ -156,7 +177,10 @@ namespace Biblioteca
             }
 
         }
-
+        public static void Recibir(Profesores p, string mensaje)
+        {
+            p.mensajes.Add(mensaje);
+        }
         public static void LoginProfesor(string usuario, string contraseña)
         {
             foreach (Profesores p in listaProfesores)
@@ -188,6 +212,19 @@ namespace Biblioteca
             }
             return prof;
         }
+        public static Profesores getProfesorC(string cedula)
+        {
+            Profesores prof = new Profesores();
+            foreach (Profesores p in listaProfesores)
+            {
+                if (p.cedula == usuario )
+                {
+                    prof = p;
+                    break;
+                }
+            }
+            return prof;
+        }
 
 
 
@@ -211,14 +248,16 @@ namespace Biblioteca
         {
             return p.materia;
         }
-        public static string Grupo(Profesores p)
+        public static string NombreGrupo(Profesores p)
         {
-            return p.grupo;
+            return Grupos.Nombre(p.grupoProfesor);
         }
         public static string Usuario(Profesores p)
         {
             return p.usuario;
         }
+
+
         
        
 
@@ -275,23 +314,120 @@ namespace Biblioteca
     {
         private string nombre;
         static List<Grupos> listaGrupos = new List<Grupos>();
-        static List<Profesores> profesGrupo = new List<Profesores>();
-        static List<Alumnos> alumnosGrupo = new List<Alumnos>();
+        List<Profesores> profesGrupo = new List<Profesores>();
+        List<Alumnos> alumnosGrupo = new List<Alumnos>();
+        List<string> listaMaterias = new List<string>();
         public Grupos()
         {
 
         }
-        public Grupos(string nombre, List<Profesores> profesGrupo0, List<Alumnos> alumnosGrupo0)
+        public Grupos(string nombre, List<Profesores> profesGrupo0, List<Alumnos> alumnosGrupo0, List<string> listaMaterias0)
         {
             this.nombre = nombre;
             profesGrupo = profesGrupo0;
             alumnosGrupo = alumnosGrupo0;
+            listaMaterias = listaMaterias0;
+            
         }
 
         public static string Nombre(Grupos g)
         {
             return g.nombre;
         }
+
+        public static List<Profesores> GetProfesGrupo(Grupos g)
+        {
+            return g.profesGrupo;
+        }
+
+        public static Grupos GetGrupo(string nombreGrupo)
+        {
+            Grupos retorno = new Grupos();
+            foreach (Grupos g in listaGrupos)
+            {
+                if (g.nombre == nombreGrupo)
+                {
+                    
+                    retorno = g;
+                }
+            }
+            return retorno;
+        }
+
+        public static List<string> getMaterias(Grupos g)
+        {
+            return g.listaMaterias;
+        }
+
+        public static List<Grupos> GetGrupos()
+        {
+            return listaGrupos;
+        }
+
+        public static void IngresarGrupo(Grupos g)
+        {
+            listaGrupos.Add(g);
+        }
+    }
+
+
+    public class Chat
+    {
+        private string materia;
+        
+        List<string> mensajes = new List<string>();
+        public Chat()
+        {
+
+        }
+        public Chat(List<string> mensajes0, string materia)
+        {
+            this.materia = materia;
+            mensajes = mensajes0;
+
+        }
+
+
+
+
+    }
+    public class Mensaje
+    {
+        private string emisor;
+        private string contenido;
+        private int estado;
+        private string destinatario;
+        public Mensaje()
+        {
+
+        }
+        public Mensaje(string contenido, string emisor, int estado, string destinatario)
+        {
+            this.estado = estado;
+            this.contenido = contenido;
+            this.emisor = emisor;
+            this.destinatario = destinatario;
+
+        }
+
+        public static string Contenido(Mensaje m)
+        {
+            return m.contenido;
+        }
+        public static string Emisor(Mensaje m)
+        {
+            return m.emisor;
+        }
+        public static int Estado(Mensaje m)
+        {
+            return m.estado;
+        }
+
+        
+
+
+
+
 
     }
 }

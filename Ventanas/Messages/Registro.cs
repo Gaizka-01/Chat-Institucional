@@ -15,10 +15,22 @@ namespace Ventanas1
         public Registro()
         {          
             InitializeComponent(); 
-            tbMateria.Visible = false;
-            pMateria.Visible = false;
+            
         }
-        
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            lbMateria.Visible = false;
+            pMateria.Visible = false;
+            lblMateria.Visible = false; 
+            List<Grupos> cargar = new List<Grupos>();
+            cargar = Grupos.GetGrupos();
+
+            foreach (Grupos g in cargar)
+            {
+                lbGrupo.Items.Add(Grupos.Nombre(g));
+            }
+        }
+
         //botones cerrar y minimizar
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -108,42 +120,6 @@ namespace Ventanas1
             }
         }
 
-        private void tbGrupo_Enter(object sender, EventArgs e)
-        {
-            if(tbGrupo.Text == "Grupo")
-            {
-                tbGrupo.Text = "";
-                tbGrupo.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void tbGrupo_Leave(object sender, EventArgs e)
-        {
-            if(tbGrupo.Text == "")
-            {
-                tbGrupo.Text = "Grupo";
-                tbGrupo.ForeColor = Color.DimGray;
-            }
-        }
-
-        private void tbMateria_Enter(object sender, EventArgs e)
-        {
-            if(tbMateria.Text == "Materia")
-            {
-                tbMateria.Text = "";
-                tbMateria.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void tbMateria_Leave(object sender, EventArgs e)
-        {
-            if(tbMateria.Text == "")
-            {
-                tbMateria.Text = "Materia";
-                tbMateria.ForeColor = Color.DimGray;
-            }
-        }
-
         private void tbCedula_Enter(object sender, EventArgs e)
         {
             if(tbCedula.Text == "Cedula")
@@ -181,16 +157,38 @@ namespace Ventanas1
         }
         private void rbAlumno_CheckedChanged(object sender, EventArgs e)
         {
-            rbProfesor.Checked = false;
-            tbMateria.Visible = false;
-            pMateria.Visible = false;
+            if (rbAlumno.Checked == true)
+            {
+                rbProfesor.Checked = false;
+                lblMateria.Visible = false;
+                lbMateria.Visible = false;
+                pMateria.Visible = false;
+            }
+            
         }
 
         private void rbProfesor_CheckedChanged(object sender, EventArgs e)
         {
-            rbAlumno.Checked = false;
-            tbMateria.Visible = true;
-            pMateria.Visible = true;
+            if(rbProfesor.Checked == true)
+            {
+                rbAlumno.Checked = false;
+                lblMateria.Visible = true;
+                lbMateria.Visible = true;
+                pMateria.Visible = true;
+            }
+            
+        }
+
+        private void lbGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Grupos g = new Grupos();
+            g = Grupos.GetGrupo(Convert.ToString(lbGrupo.SelectedItem));
+            List<string> materias = new List<string>();
+            materias = Grupos.getMaterias(g);
+            foreach (string m in materias)
+            {
+                lbMateria.Items.Add(m);
+            }
         }
 
 
@@ -202,7 +200,7 @@ namespace Ventanas1
             {
                 case true:
 
-                    if (tbNombre.Text == "Nombre" || tbApellido.Text == "Apellido" || tbCedula.Text == "Cedula" || tbContraseña.Text == "Contraseña" || tbContraseña2.Text == "Repetir Contraseña" || tbGrupo.Text == "Grupo")
+                    if (tbNombre.Text == "Nombre" || tbApellido.Text == "Apellido" || tbCedula.Text == "Cedula" || tbContraseña.Text == "Contraseña" || tbContraseña2.Text == "Repetir Contraseña" || lbGrupo.SelectedItem == null)
                     {
                         MessageBox.Show("Por Favor Completa Todos Los Campos");
                     }
@@ -215,12 +213,11 @@ namespace Ventanas1
                     {
                         try
                         {
-                            Alumnos.CrearAlummo(tbNombre.Text, tbApellido.Text, Convert.ToInt32(tbCedula.Text), tbContraseña.Text, tbGrupo.Text);
+                            Alumnos.CrearAlummo(tbNombre.Text, tbApellido.Text, Convert.ToInt32(tbCedula.Text), tbContraseña.Text, Grupos.GetGrupo(Convert.ToString(lbGrupo.SelectedItem)));
                             MessageBox.Show("Usuario Creado Correctamente");
-                            Visible = false;
                             Login nueva = new Login();
                             nueva.Show();
-                            
+                            this.Close();                            
                         }
                         catch
                         {
@@ -229,7 +226,7 @@ namespace Ventanas1
                     }
                     break;
                 case false:
-                    if (tbNombre.Text == "Nombre" || tbApellido.Text == "Apellido" || tbCedula.Text == "Cedula" || tbContraseña.Text == "Contraseña" || tbContraseña2.Text == "Repetir Contraseña" || tbGrupo.Text == "Grupo" ||tbMateria.Text == "Materia")
+                    if (tbNombre.Text == "Nombre" || tbApellido.Text == "Apellido" || tbCedula.Text == "Cedula" || tbContraseña.Text == "Contraseña" || tbContraseña2.Text == "Repetir Contraseña" || lbGrupo.SelectedItem == null ||lbMateria.SelectedItem == null)
                     {
                         MessageBox.Show("Por Favor Completa Todos Los Campos");
                     }
@@ -241,8 +238,11 @@ namespace Ventanas1
                     {
                         try
                         {
-                            Alumnos.CrearAlummo(tbNombre.Text, tbApellido.Text, Convert.ToInt32(tbCedula.Text), tbContraseña.Text, tbGrupo.Text);
+                            Profesores.CrearProfesor(tbNombre.Text, tbApellido.Text, Convert.ToInt32(tbCedula.Text), tbContraseña.Text, Grupos.GetGrupo(Convert.ToString(lbGrupo.SelectedItem)), Convert.ToString(lbMateria.SelectedItem));
                             MessageBox.Show("Usuario Creado Correctamente");
+                            Login nueva = new Login();
+                            nueva.Show();
+                            this.Close();
                         }
                         catch
                         {

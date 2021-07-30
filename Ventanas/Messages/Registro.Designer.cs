@@ -45,15 +45,17 @@ namespace Ventanas1
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbContraseña2 = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbGrupo = new System.Windows.Forms.TextBox();
             this.pMateria = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.tbMateria = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tbCedula = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.rbAlumno = new System.Windows.Forms.RadioButton();
             this.rbProfesor = new System.Windows.Forms.RadioButton();
+            this.lbGrupo = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbMateria = new System.Windows.Forms.ListBox();
+            this.lblMateria = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +128,7 @@ namespace Ventanas1
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
-            this.panel3.Location = new System.Drawing.Point(310, 190);
+            this.panel3.Location = new System.Drawing.Point(304, 176);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 1);
             this.panel3.TabIndex = 59;
@@ -137,7 +139,7 @@ namespace Ventanas1
             this.tbApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.tbApellido.Location = new System.Drawing.Point(310, 164);
+            this.tbApellido.Location = new System.Drawing.Point(304, 150);
             this.tbApellido.Name = "tbApellido";
             this.tbApellido.Size = new System.Drawing.Size(420, 20);
             this.tbApellido.TabIndex = 2;
@@ -148,7 +150,7 @@ namespace Ventanas1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(310, 157);
+            this.panel2.Location = new System.Drawing.Point(304, 143);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(420, 1);
             this.panel2.TabIndex = 57;
@@ -159,7 +161,7 @@ namespace Ventanas1
             this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.tbNombre.Location = new System.Drawing.Point(310, 131);
+            this.tbNombre.Location = new System.Drawing.Point(304, 117);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(420, 20);
             this.tbNombre.TabIndex = 1;
@@ -172,7 +174,7 @@ namespace Ventanas1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(310, 64);
+            this.label2.Location = new System.Drawing.Point(304, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 17);
             this.label2.TabIndex = 62;
@@ -181,7 +183,7 @@ namespace Ventanas1
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DimGray;
-            this.panel5.Location = new System.Drawing.Point(310, 124);
+            this.panel5.Location = new System.Drawing.Point(304, 110);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(420, 1);
             this.panel5.TabIndex = 63;
@@ -192,7 +194,7 @@ namespace Ventanas1
             this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.tbContraseña.Location = new System.Drawing.Point(310, 230);
+            this.tbContraseña.Location = new System.Drawing.Point(304, 216);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.Size = new System.Drawing.Size(420, 20);
             this.tbContraseña.TabIndex = 4;
@@ -203,7 +205,7 @@ namespace Ventanas1
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Location = new System.Drawing.Point(310, 256);
+            this.panel6.Location = new System.Drawing.Point(304, 242);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(420, 1);
             this.panel6.TabIndex = 65;
@@ -214,7 +216,7 @@ namespace Ventanas1
             this.tbContraseña2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbContraseña2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbContraseña2.ForeColor = System.Drawing.Color.DimGray;
-            this.tbContraseña2.Location = new System.Drawing.Point(310, 263);
+            this.tbContraseña2.Location = new System.Drawing.Point(304, 249);
             this.tbContraseña2.Name = "tbContraseña2";
             this.tbContraseña2.Size = new System.Drawing.Size(420, 20);
             this.tbContraseña2.TabIndex = 5;
@@ -225,29 +227,15 @@ namespace Ventanas1
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DimGray;
-            this.panel7.Location = new System.Drawing.Point(310, 289);
+            this.panel7.Location = new System.Drawing.Point(304, 275);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(420, 1);
             this.panel7.TabIndex = 67;
             // 
-            // tbGrupo
-            // 
-            this.tbGrupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.tbGrupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbGrupo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbGrupo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbGrupo.Location = new System.Drawing.Point(310, 296);
-            this.tbGrupo.Name = "tbGrupo";
-            this.tbGrupo.Size = new System.Drawing.Size(420, 20);
-            this.tbGrupo.TabIndex = 6;
-            this.tbGrupo.Text = "Grupo";
-            this.tbGrupo.Enter += new System.EventHandler(this.tbGrupo_Enter);
-            this.tbGrupo.Leave += new System.EventHandler(this.tbGrupo_Leave);
-            // 
             // pMateria
             // 
             this.pMateria.BackColor = System.Drawing.Color.DimGray;
-            this.pMateria.Location = new System.Drawing.Point(310, 355);
+            this.pMateria.Location = new System.Drawing.Point(304, 399);
             this.pMateria.Name = "pMateria";
             this.pMateria.Size = new System.Drawing.Size(420, 1);
             this.pMateria.TabIndex = 69;
@@ -255,31 +243,17 @@ namespace Ventanas1
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.DimGray;
-            this.panel9.Location = new System.Drawing.Point(310, 322);
+            this.panel9.Location = new System.Drawing.Point(304, 337);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(420, 1);
             this.panel9.TabIndex = 70;
-            // 
-            // tbMateria
-            // 
-            this.tbMateria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.tbMateria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMateria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbMateria.ForeColor = System.Drawing.Color.DimGray;
-            this.tbMateria.Location = new System.Drawing.Point(310, 329);
-            this.tbMateria.Name = "tbMateria";
-            this.tbMateria.Size = new System.Drawing.Size(420, 20);
-            this.tbMateria.TabIndex = 7;
-            this.tbMateria.Text = "Materia";
-            this.tbMateria.Enter += new System.EventHandler(this.tbMateria_Enter);
-            this.tbMateria.Leave += new System.EventHandler(this.tbMateria_Leave);
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.DimGray;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrar.Location = new System.Drawing.Point(277, 371);
+            this.btnRegistrar.Location = new System.Drawing.Point(277, 405);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(482, 33);
             this.btnRegistrar.TabIndex = 8;
@@ -293,7 +267,7 @@ namespace Ventanas1
             this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.tbCedula.Location = new System.Drawing.Point(310, 197);
+            this.tbCedula.Location = new System.Drawing.Point(304, 183);
             this.tbCedula.Name = "tbCedula";
             this.tbCedula.Size = new System.Drawing.Size(420, 20);
             this.tbCedula.TabIndex = 3;
@@ -305,7 +279,7 @@ namespace Ventanas1
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.DimGray;
-            this.panel10.Location = new System.Drawing.Point(310, 223);
+            this.panel10.Location = new System.Drawing.Point(304, 209);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(420, 1);
             this.panel10.TabIndex = 74;
@@ -316,7 +290,7 @@ namespace Ventanas1
             this.rbAlumno.Checked = true;
             this.rbAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbAlumno.ForeColor = System.Drawing.Color.DimGray;
-            this.rbAlumno.Location = new System.Drawing.Point(310, 93);
+            this.rbAlumno.Location = new System.Drawing.Point(304, 79);
             this.rbAlumno.Name = "rbAlumno";
             this.rbAlumno.Size = new System.Drawing.Size(89, 25);
             this.rbAlumno.TabIndex = 1;
@@ -330,7 +304,7 @@ namespace Ventanas1
             this.rbProfesor.AutoSize = true;
             this.rbProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbProfesor.ForeColor = System.Drawing.Color.DimGray;
-            this.rbProfesor.Location = new System.Drawing.Point(405, 93);
+            this.rbProfesor.Location = new System.Drawing.Point(399, 79);
             this.rbProfesor.Name = "rbProfesor";
             this.rbProfesor.Size = new System.Drawing.Size(88, 25);
             this.rbProfesor.TabIndex = 76;
@@ -338,21 +312,72 @@ namespace Ventanas1
             this.rbProfesor.UseVisualStyleBackColor = true;
             this.rbProfesor.CheckedChanged += new System.EventHandler(this.rbProfesor_CheckedChanged);
             // 
+            // lbGrupo
+            // 
+            this.lbGrupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
+            this.lbGrupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbGrupo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbGrupo.ForeColor = System.Drawing.Color.DimGray;
+            this.lbGrupo.FormattingEnabled = true;
+            this.lbGrupo.ItemHeight = 16;
+            this.lbGrupo.Location = new System.Drawing.Point(304, 299);
+            this.lbGrupo.Name = "lbGrupo";
+            this.lbGrupo.Size = new System.Drawing.Size(420, 32);
+            this.lbGrupo.TabIndex = 77;
+            this.lbGrupo.SelectedIndexChanged += new System.EventHandler(this.lbGrupo_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(304, 279);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 17);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "Seleccionar Grupo:";
+            // 
+            // lbMateria
+            // 
+            this.lbMateria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
+            this.lbMateria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbMateria.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbMateria.ForeColor = System.Drawing.Color.DimGray;
+            this.lbMateria.FormattingEnabled = true;
+            this.lbMateria.ItemHeight = 16;
+            this.lbMateria.Location = new System.Drawing.Point(304, 361);
+            this.lbMateria.Name = "lbMateria";
+            this.lbMateria.Size = new System.Drawing.Size(420, 32);
+            this.lbMateria.TabIndex = 79;
+            // 
+            // lblMateria
+            // 
+            this.lblMateria.AutoSize = true;
+            this.lblMateria.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.lblMateria.ForeColor = System.Drawing.Color.DimGray;
+            this.lblMateria.Location = new System.Drawing.Point(304, 341);
+            this.lblMateria.Name = "lblMateria";
+            this.lblMateria.Size = new System.Drawing.Size(139, 17);
+            this.lblMateria.TabIndex = 80;
+            this.lblMateria.Text = "Seleccionar Materia:";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 450);
+            this.Controls.Add(this.lblMateria);
+            this.Controls.Add(this.lbMateria);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbGrupo);
             this.Controls.Add(this.rbProfesor);
             this.Controls.Add(this.rbAlumno);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.tbCedula);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.tbMateria);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.pMateria);
-            this.Controls.Add(this.tbGrupo);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.tbContraseña2);
             this.Controls.Add(this.panel6);
@@ -372,6 +397,7 @@ namespace Ventanas1
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -397,14 +423,16 @@ namespace Ventanas1
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox tbContraseña2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tbGrupo;
         private System.Windows.Forms.Panel pMateria;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox tbMateria;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox tbCedula;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.RadioButton rbAlumno;
         private System.Windows.Forms.RadioButton rbProfesor;
+        private System.Windows.Forms.ListBox lbGrupo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lbMateria;
+        private System.Windows.Forms.Label lblMateria;
     }
 }

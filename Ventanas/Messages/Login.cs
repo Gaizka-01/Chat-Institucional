@@ -21,6 +21,7 @@ namespace Messages
             InitializeComponent();
 
         }
+        
         //eleccion de tipo de usuario
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
@@ -110,9 +111,9 @@ namespace Messages
                             Alumnos.LoginAlumno(tbUsuario.Text, tbContraseña.Text);
                             Alumnos nuevo = new Alumnos();
                             nuevo = Alumnos.getAlumnmo(tbUsuario.Text, tbContraseña.Text);
-                            intAlumno nueva = new intAlumno(Alumnos.Nombre(nuevo), Alumnos.Apelido(nuevo), Alumnos.Grupo(nuevo));
+                            intAlumno nueva = new intAlumno(Alumnos.Nombre(nuevo), Alumnos.Apelido(nuevo), Alumnos.NombreGrupo(nuevo), Alumnos.Cedula(nuevo));
                             nueva.Visible = true;
-                            Visible = false;
+                            this.Hide();
                         }
                         catch
                         {
@@ -127,8 +128,7 @@ namespace Messages
                             nuevo = Profesores.getProfesor(tbUsuario.Text, tbContraseña.Text);
                             intProfesor nueva = new intProfesor();
                             nueva.Visible = true;
-                            Visible = false;
-
+                            this.Hide();
                         }
                         catch
                         {
@@ -142,7 +142,7 @@ namespace Messages
                             Administradores.LoginAdministrador(tbUsuario.Text, tbContraseña.Text);
                             intAdmin nueva = new intAdmin();
                             nueva.Visible = true;
-                            Visible = false;
+                            this.Hide();
                         }
                         catch
                         {
