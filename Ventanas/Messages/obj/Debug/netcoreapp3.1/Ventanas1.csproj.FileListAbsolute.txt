@@ -40,3 +40,5 @@ E:\messagesrepositorio\Chat-Institucional\Ventanas\Messages\obj\Debug\netcoreapp
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Messages\obj\Debug\netcoreapp3.1\Ventanas1.dll
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Messages\obj\Debug\netcoreapp3.1\Ventanas1.pdb
 E:\messagesrepositorio\Chat-Institucional\Ventanas\Messages\obj\Debug\netcoreapp3.1\Ventanas1.genruntimeconfig.cache
+E:\messagesrepositorio\Chat-Institucional\Ventanas\Messages\obj\Debug\netcoreapp3.1\Ventanas1.intAdmin.resources
+E:\messagesrepositorio\Chat-Institucional\Ventanas\Messages\obj\Debug\netcoreapp3.1\Ventanas1.intProfesor.resources

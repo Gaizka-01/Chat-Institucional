@@ -163,6 +163,8 @@ namespace Messages
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::Ventanas1.Properties.Resources.Profesor1;
             this.pictureBox2.Image = global::Ventanas1.Properties.Resources.Profesor1;
             this.pictureBox2.Location = new System.Drawing.Point(304, 111);
             this.pictureBox2.Name = "pictureBox2";
